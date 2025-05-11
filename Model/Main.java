@@ -13,5 +13,12 @@ public class Main
         Tablero tablero = new Tablero();
         tablero.generarTabla1();
         tablero.mostrarTablero();
+        
+        System.out.println();
+        
+        
+        Tablero tablero2 = new Tablero();
+        tablero.generarTriangulo();
+        tablero.mostrarTablero();
     }
 }

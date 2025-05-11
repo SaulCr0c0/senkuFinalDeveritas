@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ValidarMovimientos
+comment1.params=iXNuevo\ iYNuevo\ iXViejo\ iYViejo\ mTablero
+comment1.target=boolean\ validarMovimiento(int,\ int,\ int,\ int,\ char[][])
+comment2.params=iXNuevo\ iYNuevo\ iXViejo\ iYViejo
+comment2.target=void\ realizarJugada(int,\ int,\ int,\ int)
+numComments=3
