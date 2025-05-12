@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=SenkuGUI
+comment1.params=
+comment1.target=SenkuGUI()
+comment2.params=
+comment2.target=void\ inicializarBotones()
+comment3.params=fila\ col
+comment3.target=void\ manejarClick(int,\ int)
+comment4.params=
+comment4.target=void\ actualizarVista()
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6
