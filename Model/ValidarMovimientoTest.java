@@ -55,19 +55,23 @@ public class ValidarMovimientoTest
     }
     @Test
     public void validarMovimientoTest(){
+        //test para un movimiento valido
         assertTrue(ValidarMovimientos.validarMovimiento(3,3,1,3,mTablero));
-        //assertFalse(ValidarMovimientos.validarMovimiento(2,4,4,4,mTablero));
+        //test para un movimiento invalido
+        assertFalse(ValidarMovimientos.validarMovimiento(2,4,4,4,mTablero));
     }
     @Test
     public void esMovimientoTest(){
-        
+        //Movimiento Invalido ya que esta en diagonal
+        assertFalse(ValidarMovimientos.esMovimiento(4,4,2,2));
+        //Movimiento Valido
+        assertTrue(ValidarMovimientos.esMovimiento(3,1,3,3));
     }
     @Test
     public void devolverMedioTest(){
-        
-    }
-    @Test
-    public void realizarJugadaTest(){
-        
+        //Verifica si existe una pieza entre dos posiciones
+        assertEquals('*',ValidarMovimientos.devolverMedio(mTablero,3,1,3,3));
+        //Verifica si existe un guion entre dos posiciones
+        assertEquals('-',ValidarMovimientos.devolverMedio(mTablero,3,4,3,2));
     }
 }

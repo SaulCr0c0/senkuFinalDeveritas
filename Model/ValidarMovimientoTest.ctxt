@@ -8,6 +8,4 @@ comment3.params=
 comment3.target=void\ esMovimientoTest()
 comment4.params=
 comment4.target=void\ devolverMedioTest()
-comment5.params=
-comment5.target=void\ realizarJugadaTest()
-numComments=6
+numComments=5
