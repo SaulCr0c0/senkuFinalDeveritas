@@ -6,26 +6,26 @@ public class ValidarMovimientos
     // Debe haber un hueco en destino HECHO
     // Entre origen y destino debe haber una ficha que se “salta” HECHO
     // Movimiento válido en línea recta (2 celdas de distancia) HECHO
-    public boolean validarMovimiento(int iXNuevo,int iYNuevo,int iXViejo, int iYViejo, char mTablero[][]){
-        if(mTablero[iXViejo][iYViejo]=='*' && mTablero[iXNuevo][iXViejo]== '-' && esMovimiento(iXNuevo, iYNuevo, iXViejo, iYViejo)){
+    public static boolean validarMovimiento(int iXNuevo,int iYNuevo,int iXViejo, int iYViejo, char mTablero[][]){
+        if(mTablero[iXViejo][iYViejo]=='*' && mTablero[iXNuevo][iYNuevo]== '-' && esMovimiento(iXNuevo, iYNuevo, iXViejo, iYViejo)){
             return devolverMedio(mTablero, iXNuevo, iYNuevo, iXViejo, iYViejo) == '*';
         }
         return false;
     }
-    public boolean esMovimiento(int iXNuevo,int iYNuevo,int iXViejo, int iYViejo){
-        // Si están en la misma fila (horizontal)
+    public static boolean esMovimiento(int iXNuevo,int iYNuevo,int iXViejo, int iYViejo){
+        // Movimiento horizontal válido
         if (iXViejo == iXNuevo) {
-            return Math.abs(iYViejo - iYNuevo) > 1;
+            return Math.abs(iYViejo - iYNuevo) == 2;
         }
-        // Si están en la misma columna (vertical)
-        else if (iYNuevo == iYViejo) {
-            return Math.abs(iYViejo - iYNuevo) > 1;
+        // Movimiento vertical válido
+        if (iYNuevo == iYViejo) {
+            return Math.abs(iXViejo - iXNuevo) == 2;
         }
         return false;
-
     }
 
-    public char devolverMedio(char mTablero[][],int iXNuevo,int iYNuevo,int iXViejo, int iYViejo){
+
+    public static char devolverMedio(char mTablero[][],int iXNuevo,int iYNuevo,int iXViejo, int iYViejo){
         if (iXNuevo==iXViejo && Math.abs(iYNuevo - iYViejo) == 2){
             int iYMedio = (iYNuevo + iYViejo) / 2;
             return mTablero[iXViejo][iYMedio];
@@ -34,11 +34,11 @@ public class ValidarMovimientos
             int iXMedio = (iXNuevo + iXViejo) / 2;
             return mTablero[iXMedio][iYViejo];
         }
-        return '=';
+        return '-';
     }
     
     //Cambia las fichas de lugar
-    public void realizarJugada(char mTablero[][],int iXNuevo,int iYNuevo,int iXViejo, int iYViejo){
+    public static void realizarJugada(char mTablero[][],int iXNuevo,int iYNuevo,int iXViejo, int iYViejo){
         if(iXNuevo==iXViejo){
             mTablero[iXViejo][iYViejo] = '-';
             mTablero[iXNuevo][iYNuevo] = '*';

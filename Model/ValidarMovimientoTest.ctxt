@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ValidarMovimientoTest
+comment1.params=
+comment1.target=void\ crearMatriz()
+comment2.params=
+comment2.target=void\ validarMovimientoTest()
+comment3.params=
+comment3.target=void\ esMovimientoTest()
+comment4.params=
+comment4.target=void\ devolverMedioTest()
+comment5.params=
+comment5.target=void\ realizarJugadaTest()
+numComments=6

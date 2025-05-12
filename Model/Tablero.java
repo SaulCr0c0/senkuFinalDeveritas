@@ -57,7 +57,9 @@ public class Tablero
                 mTablero[i][j] = '*';
             }
         }
-    }
+        
+        mTablero[3][3] = '-';
+     }
     public void generarTriangulo(){
         limpiarTablero();
         int iAlturaTriangulo = 4;      // El triángulo ocupa 4 filas
@@ -84,9 +86,16 @@ public class Tablero
         }
     }
     public void mostrarTablero() {
+        System.out.print("  ");
+        for (int j = 0; j < 7; j++) {
+            System.out.print((j + 1) + " ");
+        }
+        System.out.println();
+    
         for (int i = 0; i < 7; i++) {
+            System.out.print((i + 1) + " ");
             for (int j = 0; j < 7; j++) {
-                System.out.print(mTablero[i][j]);
+                System.out.print(mTablero[i][j] + " ");
             }
             System.out.println();
         }

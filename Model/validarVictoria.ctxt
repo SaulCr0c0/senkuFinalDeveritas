@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=validarVictoria
+comment1.params=mTablero
+comment1.target=boolean\ esVictoria(char[][])
+numComments=2
